@@ -13,6 +13,17 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "akirosingh",
+      "name": "Adam Kirosingh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24550000?v=4",
+      "profile": "https://github.com/akirosingh",
+      "contributions": [
+        "code",
+        "ideas",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
