@@ -2,10 +2,10 @@
 
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here 
 ... did I reference the lab correctly here? -->
-![GitHub repo size](https://img.shields.io/github/repo-size/Jagannathan-Repository/README-template.md)
-![GitHub contributors](https://img.shields.io/github/contributors/Jagannathan-Repository/README-template.md)
-![GitHub stars](https://img.shields.io/github/stars/Jagannathan-Repository/README-template.md?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Jagannathan-Repository/README-template.md?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/akirosingh/Jagannathantools)
+![GitHub contributors](https://img.shields.io/github/contributors/Jagannathantools/README.md)
+![GitHub stars](https://img.shields.io/github/stars/akirosingh/Jagannathantools?style=social)
+![GitHub forks](https://img.shields.io/github/forks/akirosingh/Jagannathantools?style=social)
 
 The primary purpose of this package is to <!--- primary purpose here -->. 
 
