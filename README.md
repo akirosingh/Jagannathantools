@@ -6,7 +6,6 @@
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here 
 ... did I reference the lab correctly here? -->
 ![GitHub repo size](https://img.shields.io/github/repo-size/akirosingh/Jagannathantools)
-![GitHub contributors](https://img.shields.io/github/contributors/Jagannathantools)
 ![GitHub stars](https://img.shields.io/github/stars/akirosingh/Jagannathantools?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/akirosingh/Jagannathantools?style=social)
 
@@ -99,7 +98,6 @@ Thanks to the following people who have contributed to this project:
 
 <!-- people to thank here -->
 
-You might want to consider using something like the [All Contributors](https://github.com/all-contributors/all-contributors) specification and its [emoji key](https://allcontributors.org/docs/en/emoji-key).
 
 ## Contact
 
