@@ -1,4 +1,4 @@
-# JAG LAB Tools
+# Jagannathan Lab Tools
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -46,16 +46,15 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installing <project_name>
 
-To install <project_name>, follow these steps:
+To install jagtools, follow these steps:
 
-Linux and macOS:
+R:
 ```
-<install_command>
-```
+if(!require(devtools)){
+    install.packages("devtools")
+}
 
-Windows:
-```
-<install_command>
+devtools::install_github('akirosingh/Jagannathantools')
 ```
 ## Using <project_name>
 
