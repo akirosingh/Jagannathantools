@@ -1,4 +1,7 @@
 # JAG LAB Tools
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here 
 ... did I reference the lab correctly here? -->
@@ -80,6 +83,19 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 ## Contributors
 
 Thanks to the following people who have contributed to this project:
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/emmanuella-coder"><img src="https://avatars.githubusercontent.com/u/80437695?v=4?s=100" width="100px;" alt=""/><br /><sub><b>emmanuella-coder</b></sub></a><br /><a href="#design-emmanuella-coder" title="Design">🎨</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 <!-- people to thank here -->
 
