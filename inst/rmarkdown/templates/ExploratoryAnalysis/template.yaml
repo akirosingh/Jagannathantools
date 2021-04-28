@@ -1,1 +1,3 @@
 name: Exploratory Analysis
+description: Vanilla pipeline for exploring data
+create_dir: false
