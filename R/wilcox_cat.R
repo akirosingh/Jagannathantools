@@ -3,10 +3,10 @@
 ##' .. content for \details{} ..
 ##'
 ##' @title
-##' @param df
-##' @param x_cat
-##' @param y_var
-##' @param condition
+##' @param df data
+##' @param x_cat a categorical/discrete variable
+##' @param y_var a continuous variable
+##' @param condition the different experimental conditions in an experiment like Stim
 ##' @return
 ##' @author akirosingh
 ##' @export

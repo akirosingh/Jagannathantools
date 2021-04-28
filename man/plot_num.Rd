@@ -6,6 +6,17 @@
 \usage{
 plot_num(df, x_num, y_var, condition, correlation_results)
 }
+\arguments{
+\item{df}{data}
+
+\item{x_num}{a continuous variable}
+
+\item{y_var}{another continuous variable}
+
+\item{condition}{the different experimental conditions in an experiment}
+
+\item{correlation_results}{results from spearman tests}
+}
 \value{
 
 }

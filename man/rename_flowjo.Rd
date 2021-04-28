@@ -6,6 +6,11 @@
 \usage{
 rename_flowjo(data, removal = " \\\\| Freq\\\\. of Parent \\\\(\\\\\%\\\\)")
 }
+\arguments{
+\item{data}{dataframe from flowjo with raw column names}
+
+\item{removal}{the parts of the column names to remove}
+}
 \value{
 
 }

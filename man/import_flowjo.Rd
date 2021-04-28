@@ -6,6 +6,11 @@
 \usage{
 import_flowjo(directory = "DataRaw/", filter_string = "\\\\.csv")
 }
+\arguments{
+\item{directory}{a string with the path to the folder containng csv files}
+
+\item{filter_string}{a string that has a pattern filter out csv files}
+}
 \value{
 
 }

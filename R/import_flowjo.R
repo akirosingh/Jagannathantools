@@ -3,8 +3,8 @@
 ##' .. content for \details{The defaults take all the csv in the DataRaw/ folder, but changing the filter_string can allow you to be selective about which files to merge} ..
 ##'
 ##' @title Importing raw .csv files directly from FlowJo
-##' @param directory
-##' @param filter_string
+##' @param directory a string with the path to the folder containng csv files
+##' @param filter_string a string that has a pattern filter out csv files
 ##' @return
 ##' @author akirosingh
 ##' @export

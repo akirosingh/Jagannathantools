@@ -3,8 +3,8 @@
 ##' .. content for \details{} ..
 ##'
 ##' @title
-##' @param data
-##' @param removal
+##' @param data dataframe from flowjo with raw column names
+##' @param removal the parts of the column names to remove
 ##' @return
 ##' @author akirosingh
 ##' @export

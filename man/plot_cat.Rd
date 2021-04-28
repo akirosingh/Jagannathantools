@@ -6,11 +6,22 @@
 \usage{
 plot_cat(df, x_cat, y_var, condition, wilcox_results)
 }
+\arguments{
+\item{df}{data}
+
+\item{x_cat}{a categorical/discrete variable}
+
+\item{y_var}{a continuous variable}
+
+\item{condition}{the different experimental conditions in an experiment}
+
+\item{wilcox_results}{the results of wilcox tests}
+}
 \value{
 
 }
 \description{
-.. content for \description{Wrapper function to plot boxplots with wilcox significance added from previous wilcox_cat function.} (no empty lines) ..
+.. content for \description{Wrapper function to plot boxplots with wilcox significance added from previous wilcox_cat function. It will us BH corrected P values} (no empty lines) ..
 }
 \details{
 .. content for \details{} ..

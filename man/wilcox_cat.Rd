@@ -6,6 +6,15 @@
 \usage{
 wilcox_cat(df, x_cat, y_var, condition, paired = F)
 }
+\arguments{
+\item{df}{data}
+
+\item{x_cat}{a categorical/discrete variable}
+
+\item{y_var}{a continuous variable}
+
+\item{condition}{the different experimental conditions in an experiment like Stim}
+}
 \value{
 
 }

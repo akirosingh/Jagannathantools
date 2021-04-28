@@ -3,11 +3,11 @@
 ##' .. content for \details{} ..
 ##'
 ##' @title
-##' @param df
-##' @param x_num
-##' @param y_var
-##' @param condition
-##' @param correlation_results
+##' @param df data
+##' @param x_num a continuous variable
+##' @param y_var another continuous variable
+##' @param condition the different experimental conditions in an experiment
+##' @param correlation_results results from spearman tests
 ##' @return
 ##' @author akirosingh
 ##' @export
