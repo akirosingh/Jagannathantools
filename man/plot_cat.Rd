@@ -21,7 +21,7 @@ plot_cat(df, x_cat, y_var, condition, wilcox_results)
 
 }
 \description{
-.. content for \description{Wrapper function to plot boxplots with wilcox significance added from previous wilcox_cat function. It will us BH corrected P values}
+Wrapper function to plot boxplots with wilcox significance added from previous wilcox_cat function. It will us BH corrected P values
 }
 \author{
 akirosingh

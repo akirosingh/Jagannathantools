@@ -21,7 +21,7 @@ plot_num(df, x_num, y_var, condition, correlation_results)
 
 }
 \description{
-.. content for \description{Generating a scatterplot with a spearman correlation.} (no empty lines) ..
+Generating a scatterplot with a spearman correlation.
 }
 \author{
 akirosingh

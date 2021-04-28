@@ -1,4 +1,4 @@
-##' .. content for \description{Wrapper-function to do a wilcox test across multiple conditions (Think Stim conditions) } (no empty lines) ..
+##' Wrapper-function to do a wilcox test across multiple conditions (Think Stim conditions)
 ##'
 ##'
 ##' @title Wilcox comparison within an experiment with different conditions

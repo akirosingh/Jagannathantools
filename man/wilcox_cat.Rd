@@ -19,7 +19,7 @@ wilcox_cat(df, x_cat, y_var, condition, paired = F)
 
 }
 \description{
-.. content for \description{Wrapper-function to do a wilcox test across multiple conditions (Think Stim conditions) } (no empty lines) ..
+Wrapper-function to do a wilcox test across multiple conditions (Think Stim conditions)
 }
 \author{
 akirosingh

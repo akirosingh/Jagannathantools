@@ -1,4 +1,4 @@
-##' .. content for \description{Generating a scatterplot with a spearman correlation.} (no empty lines) ..
+##' Generating a scatterplot with a spearman correlation.
 ##'
 ##'
 ##' @title Graphing spearman correlation with scatterplot
