@@ -5,8 +5,8 @@
 \title{Create ReadMe.md files}
 \usage{
 CreateReadMe(
-  template = c("Admin", "Background", "Code", "DataRaw", "DataProcessed",
-    "Dissemination", "Reports"),
+  template = c("Background", "R", "DataRaw", "DataProcessed", "Dissemination",
+    "Reports"),
   path = getwd()
 )
 }
@@ -21,7 +21,7 @@ This function creates the desired readme files. It will not overwrite the file
 however if it does not exists. It does not return anything.
 }
 \description{
-This function creates ReadMe.md in the CIDA templates for the standard
+This function creates ReadMe.md in the Jagannathan templates for the standard
 file structure
 }
 \keyword{ReadMe}

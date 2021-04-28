@@ -1,11 +1,11 @@
 Binding: proj_setup
-Title: New CIDA Project
+Title: New Jagannathan Project
 OpenFiles: ReadMe.md
 
 Parameter: PI
 Widget: TextInput
 Label: Principal Investigator
-Default:
+Default: Prasanna Jaganathan
 Position: Right
 
 Parameter: analyst
