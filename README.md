@@ -48,8 +48,8 @@ Before you begin, ensure you have met the following requirements:
 
 To install jagtools, follow these steps:
 
-R:
-```
+```{r}
+
 if(!require(devtools)){
     install.packages("devtools")
 }
