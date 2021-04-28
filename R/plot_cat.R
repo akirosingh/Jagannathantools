@@ -41,4 +41,4 @@ plot_cat <- function(df, x_cat, y_var, condition, wilcox_results) {
   )
 }
 
-}
+

@@ -24,4 +24,3 @@ plot_num <- function(df, x_num, y_var, condition, correlation_results) {
   graph
 }
 
-}

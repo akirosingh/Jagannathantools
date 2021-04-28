@@ -18,4 +18,4 @@ wilcox_cat <- function(df, x_cat, y_var, condition, paired = F) {
     pairwise.test[[x_cat]] <- pairwise.test$group2
     pairwise.test}
 
-}
+
