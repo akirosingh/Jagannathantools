@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_num.R
 \name{plot_num}
 \alias{plot_num}
-\title{}
+\title{Graphing spearman correlation with scatterplot}
 \usage{
 plot_num(df, x_num, y_var, condition, correlation_results)
 }
@@ -21,10 +21,7 @@ plot_num(df, x_num, y_var, condition, correlation_results)
 
 }
 \description{
-.. content for \description{} (no empty lines) ..
-}
-\details{
-.. content for \details{} ..
+.. content for \description{Generating a scatterplot with a spearman correlation.} (no empty lines) ..
 }
 \author{
 akirosingh

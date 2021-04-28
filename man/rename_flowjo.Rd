@@ -2,7 +2,7 @@
 % Please edit documentation in R/rename_flowjo.R
 \name{rename_flowjo}
 \alias{rename_flowjo}
-\title{}
+\title{Fixing the column names of csv files exported from flowjo}
 \usage{
 rename_flowjo(data, removal = " \\\\| Freq\\\\. of Parent \\\\(\\\\\%\\\\)")
 }
@@ -16,9 +16,6 @@ rename_flowjo(data, removal = " \\\\| Freq\\\\. of Parent \\\\(\\\\\%\\\\)")
 }
 \description{
 .. content for \description{Fixes the default column names for raw FlowJo CSV files. It takes out the freq of parent clause at the end of the name and takes out the last two cell features for the name. TODO: Make sure this works with boolean names} (no empty lines) ..
-}
-\details{
-.. content for \details{} ..
 }
 \author{
 akirosingh

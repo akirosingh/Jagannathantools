@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_cat.R
 \name{plot_cat}
 \alias{plot_cat}
-\title{}
+\title{Graphing boxplots with wilcox tests}
 \usage{
 plot_cat(df, x_cat, y_var, condition, wilcox_results)
 }
@@ -21,10 +21,7 @@ plot_cat(df, x_cat, y_var, condition, wilcox_results)
 
 }
 \description{
-.. content for \description{Wrapper function to plot boxplots with wilcox significance added from previous wilcox_cat function. It will us BH corrected P values} (no empty lines) ..
-}
-\details{
-.. content for \details{} ..
+.. content for \description{Wrapper function to plot boxplots with wilcox significance added from previous wilcox_cat function. It will us BH corrected P values}
 }
 \author{
 akirosingh

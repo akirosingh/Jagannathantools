@@ -15,9 +15,7 @@ import_flowjo(directory = "DataRaw/", filter_string = "\\\\.csv")
 
 }
 \description{
-.. content for \description{Imports csv files created directly from FlowJo and removed Mean, SD, and empty final column. In addition if there are NAs in the table the sample is removed at this step too!} (no empty lines) ..
-}
-\details{
+.. content \description{Imports csv files created directly from FlowJo and removed Mean, SD, and empty final column. In addition if there are NAs in the table the sample is removed at this step too!}
 .. content for \details{The defaults take all the csv in the DataRaw/ folder, but changing the filter_string can allow you to be selective about which files to merge} ..
 }
 \author{
