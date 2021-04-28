@@ -10,7 +10,7 @@
 
 The primary purpose of this package is to <!--- primary purpose here -->. 
 
-![](images/redlogo.svg)
+![](inst/figures/redlogo.svg)
 
 This package allows the Project Name, PI, and Project Analyst to be stored in a ProjData.dcf file to be 
 easily retrieved and used in headers and reports. 
