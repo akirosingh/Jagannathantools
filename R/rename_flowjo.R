@@ -1,8 +1,7 @@
 ##' .. content for \description{Fixes the default column names for raw FlowJo CSV files. It takes out the freq of parent clause at the end of the name and takes out the last two cell features for the name. TODO: Make sure this works with boolean names} (no empty lines) ..
 ##'
-##' .. content for \details{} ..
 ##'
-##' @title
+##' @title Fixing the column names of csv files exported from flowjo
 ##' @param data dataframe from flowjo with raw column names
 ##' @param removal the parts of the column names to remove
 ##' @return

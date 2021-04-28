@@ -1,8 +1,7 @@
-##' .. content for \description{} (no empty lines) ..
+##' .. content for \description{Generating a scatterplot with a spearman correlation.} (no empty lines) ..
 ##'
-##' .. content for \details{} ..
 ##'
-##' @title
+##' @title Graphing spearman correlation with scatterplot
 ##' @param df data
 ##' @param x_num a continuous variable
 ##' @param y_var another continuous variable

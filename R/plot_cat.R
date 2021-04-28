@@ -1,8 +1,7 @@
 ##' .. content for \description{Wrapper function to plot boxplots with wilcox significance added from previous wilcox_cat function. It will us BH corrected P values} (no empty lines) ..
 ##'
-##' .. content for \details{} ..
 ##'
-##' @title
+##' @title Graphing boxplots with wilcox tests
 ##' @param df data
 ##' @param x_cat a categorical/discrete variable
 ##' @param y_var a continuous variable

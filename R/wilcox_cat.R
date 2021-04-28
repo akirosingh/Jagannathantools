@@ -1,8 +1,7 @@
 ##' .. content for \description{Wrapper-function to do a wilcox test across multiple conditions (Think Stim conditions) } (no empty lines) ..
 ##'
-##' .. content for \details{} ..
 ##'
-##' @title
+##' @title Wilcox comparison within an experiment with different conditions
 ##' @param df data
 ##' @param x_cat a categorical/discrete variable
 ##' @param y_var a continuous variable
