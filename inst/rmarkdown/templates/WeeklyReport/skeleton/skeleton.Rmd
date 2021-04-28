@@ -13,10 +13,10 @@ knitr::opts_knit$set(root.dir = '../')
 **Project:**`r jagtools::ProjectName()`
 **PI:**`r jagtools::ProjectPI()`  
 **Prepared By:**`r jagtools::ProjectAnalyst()`  
-**Date:** `r paste(format(Sys.Date(), '%m/%d/%Y'))`  
+**Date:** `r paste(format(Sys.Date(), '%m/%d/%Y'))`    
 
 ```{r setup, include=FALSE}
-
+source("./packages.R")
 ```
 
 

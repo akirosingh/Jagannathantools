@@ -1,6 +1,6 @@
 #' Create ReadMe.md files
 #'
-#' This function creates ReadMe.md in the CIDA templates for the standard
+#' This function creates ReadMe.md in the Jagannathan templates for the standard
 #' file structure
 #'
 #'@param template Which ReadMe.md files should be created? Default is all. Partial
@@ -11,7 +11,7 @@
 #'however if it does not exists. It does not return anything.
 #'@keywords ReadMe ReadMe.md
 #'@export
-CreateReadMe <- function(template = c('Admin', 'Background', 'Code', 'DataRaw',
+CreateReadMe <- function(template = c('Background', 'R', 'DataRaw',
                                       'DataProcessed', 'Dissemination',
                                       'Reports'), path = getwd()){
   # set which ReadMe.md files to create
@@ -20,16 +20,6 @@ CreateReadMe <- function(template = c('Admin', 'Background', 'Code', 'DataRaw',
   # create list with lines for each template
   readme <- list()
 
-  readme$Admin <- c("# Admin  ",
-                    "  ",
-                    "This folder contains the scope of work and other relevant files from CIDA admin.  ",
-                    "  ",
-                    "Details about the files:  ",
-                    "  ",
-                    "File | Description",
-                    "---|---------------------------------------------------------------------",
-                    "  ",
-                    "")
   readme$Background <- c("# Background  ",
                          "  ",
                          "This folder contains documents provided by investigators and the data analysis plan.  ",
@@ -39,7 +29,7 @@ CreateReadMe <- function(template = c('Admin', 'Background', 'Code', 'DataRaw',
                          "File | Description",
                          "---|---------------------------------------------------------------------",
                          "  ")
-  readme$Code <- c("This folder contains all the code.  ",
+  readme$R <- c("This folder contains all the code.  ",
                    "  ",
                    "Details about the files in this folder:",
                    "  ",
@@ -100,4 +90,9 @@ CreateReadMe <- function(template = c('Admin', 'Background', 'Code', 'DataRaw',
   readme <- readme[!doNotOverwrite]
   con <- con[!doNotOverwrite]
   files_created <- mapply(writeLines, lapply(readme, paste0, collapse = '\n'), con)
+  cat("library(tidyverse)",file="packages.R",sep="\n")
+  cat("library(readr)",file="outfile.txt",append=TRUE)
+  cat("library(readxl)",file="outfile.txt",append=TRUE)
+  cat("library(todor)",file="outfile.txt",append=TRUE)
+  cat("library(here)",file="outfile.txt",append=TRUE)
 }

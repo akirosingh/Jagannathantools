@@ -1,9 +1,9 @@
 #' Set Default Analyst Value
 #'
 #'
-#' This function allows you to set the option CIDAtools.analyst permanently
-#' (until you change it or reinstall CIDAtools) and will
-#' simultanesouly change the default in New Cida Project Template.
+#' This function allows you to set the option Jagannathantools.analyst permanently
+#' (until you change it or reinstall Jagannathantools) and will
+#' simultanesouly change the default in New Jagannathantools Project Template.
 #'
 #' @param AnalystName A string containing the analyst name
 #' @return A message stating the name has been changed.
@@ -25,18 +25,18 @@ setAnalyst <- function(AnalystName){
                                        'R session.\n')
   site_path = R.home(component = "home")
   Project_setup <- paste0(site_path,
-                          '/library/CIDAtools/rstudio/',
+                          '/library/Jagatools/rstudio/',
                           'templates/project/proj_setup.dcf')
   if(file.access(Project_setup, 2) == -1)
     stop(paste0(msg1,
                 'You do not have permission to change\n',
-                'New CIDA Project Template'))
+                'New Jagannathan Project Template'))
   DCF <- read.dcf(file.path(Project_setup), all = T)
   DCF$Default[DCF$Parameter == 'analyst' &
                 !is.na(DCF$Parameter)] <- AnalystName
   write.dcf(DCF, file.path(Project_setup))
   return(paste('The default analyst name has been changed to',
-               getOption('CIDAtools.analyst')))
+               getOption('Jagatools.analyst')))
 }
 
 #' Get pretty numbers of rows
@@ -81,14 +81,14 @@ nLevelsP <- function(x){
 #' @param Name A string containing the analyst name
 #'
 setPermanentAnalyst <- function(Name){
-  options(CIDAtools.analyst = Name)
+  options(Jagatools.analyst = Name)
   fname = file.path("~/.Rprofile")
   opts <- character()
   if(file.exists(fname)){
     opts <- readLines(fname)
   }
-  opts[grep('options\\(CIDAtools.analyst = ', opts, invert = T)] -> opts
-  opts <- c(opts, paste0("options(CIDAtools.analyst = '",
+  opts[grep('options\\(Jagatools.analyst = ', opts, invert = T)] -> opts
+  opts <- c(opts, paste0("options(Jagatools.analyst = '",
                            paste0(Name), "')"))
   if(!file.create(fname, showWarnings = F))
     stop()
@@ -117,7 +117,7 @@ removeAnalyst <- function(quiet = F){
     return(FALSE)
   }
   opts <- readLines(fname)
-  opts[grep('options\\(CIDAtools.analyst = ', opts, invert = T)] -> opts
+  opts[grep('options\\(Jagatools.analyst = ', opts, invert = T)] -> opts
   if(file.access(fname, 2) != 0){
     if(!quiet){
       return('You do not have permission to write to users Rprofile')
@@ -133,7 +133,7 @@ removeAnalyst <- function(quiet = F){
   }
   writeLines(opts, fname)
   if(!quiet)
-    return('options(CIDAtools.analyst) has been removed from users profile')
+    return('options(Jagatools.analyst) has been removed from users profile')
   return(TRUE)
 }
 
