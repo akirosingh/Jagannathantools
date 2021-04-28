@@ -1,8 +1,16 @@
 ---
+title: "Analysis"
+author: "Author"
+date: "`r Sys.Date()`"
 output: 
-  pdf_document:
-    fig_caption: true
-geometry: margin=1in
+   html_document:
+      toc: true
+      toc_float: true
+      toc_collapsed: true
+      toc_depth: 3
+      number_sections: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r global_options, include=FALSE}
@@ -19,4 +27,123 @@ knitr::opts_knit$set(root.dir = '../')
 source("./packages.R")
 ```
 
+## Importing Data 📥️
+
+```{r import}
+# Importing a list of variables of interest
+
+# Importing data of interest
+
+
+```
+
+## Tidy 🧹️
+
+```{r Tidy}
+# Select which columns from the variables of interest
+
+# Create a df of possible variable comparison combinations
+
+
+```
+
+## Statistical Tests ✅️
+
+```{r Statistical Tests}
+# Spearman corelation for continuous to continuous variables
+
+# ics_cor <- ics_num %>% 
+#    group_by(Stim.x) %>%
+#    cor_test(vars = na.omit(varofinterest$`X, NUM`), vars2 = na.omit(varofinterest$`Y, ICS`),method = "spearman")
+# aim_cor <- aim_num %>% 
+#    group_by(Stim.x) %>%
+#    cor_test(vars = na.omit(varofinterest$`X, NUM`), vars2 = na.omit(varofinterest$`Y, AIM`),method = "spearman")
+# 
+# all_cor <- bind_rows(ics_cor,aim_cor) %>%
+#    mutate(bonferroni = signif(p.adjust(p, method = "bonferroni"),digits =3), BH = signif(p.adjust(p, method = "BH"),digits =3), holm = signif(p.adjust(p,method = "holm"),digits =3)) %>%
+#    arrange(BH)
+# 
+# all_cor %>%
+#    subset(p<0.05) %>%
+#    select(-BH,-holm,-method) %>%
+#    arrange(p) %>%
+#    knitr::kable()
+
+
+# Wilcox test for discrete (categorical) to continuous variables
+# 
+# wilcox_cat <- function(df, x_cat, y_var) {
+#    pairwise.test <- df %>% 
+#    group_by(Stim.x) %>%
+#    wilcox_test(formula =as.formula(substitute(a ~ i, list(a = as.name(y_var), i = as.name(x_cat)))))%>%
+#   add_y_position(scales = "free_y")
+#    pairwise.test[[x_cat]] <- pairwise.test$group2
+#    pairwise.test}
+# 
+# all_wilcox_ics_cat <-c()
+# for (i in 1:dim(combinations_ics_cat)[1]){
+#    wilcox_ics_cat <- wilcox_cat(ics_cat, combinations_ics_cat$x_cats[i], combinations_ics_cat$y_vars[i])
+#    all_wilcox_ics_cat <- bind_rows(all_wilcox_ics_cat, wilcox_ics_cat)
+# }
+# 
+# i <- c()
+# all_wilcox_aim_cat <-c()
+# for (i in 1:dim(combinations_aim_cat)[1]){
+#    wilcox_aim_cat <- wilcox_cat(aim_cat, combinations_aim_cat$x_cats[i], combinations_aim_cat$y_vars[i])
+#    all_wilcox_aim_cat <- bind_rows(all_wilcox_aim_cat, wilcox_aim_cat)
+# }
+# 
+# 
+# all_wilcox_cat <- bind_rows(all_wilcox_aim_cat, all_wilcox_ics_cat) %>%
+#    mutate(bonferroni = signif(p.adjust(p, method = "bonferroni"),digits = 3), BH = signif(p.adjust(p, method = "BH"),digits = 3), holm = signif(p.adjust(p,method = "holm"),digits =3)) %>%
+#    arrange(BH)
+# 
+# 
+# 
+# 
+# all_wilcox_cat %>%
+#    subset(p<0.05) %>%
+#     select(Stim.x,.y., group1,group2, p, bonferroni, cohort,random:sympM7_2) %>%
+#    pivot_longer(-c(Stim.x,.y.,group1,group2,p,bonferroni), names_to = "Condition", values_to = "Value") %>%
+#    subset(is.na(Value) == F) %>%
+#    select(-Value) %>%
+#    knitr::kable()
+
+```
+
+
+## Visualize 📈️
+
+```{r Visualize, results="asis"}
+# If new to ggplot consider using esquisse for user interface and copy code from bottom right corner
+# install.packages(esquisse)
+# esquisse::esquisser()
+
+# Function to make spearman plots
+# plot_num
+
+
+# Function to make wilcox boxplots
+# plot_cat
+
+
+# For loop over all combinations
+
+# Ex:
+ # i <- c()
+ # for (i in 1:dim(combinations_aim_num)[1]){
+ #   cat("  \n \n####",  combinations_aim_num$x_nums[i], combinations_aim_num$y_vars[i], "  \n \n ")
+ #    print(plot_num(aim_num, combinations_aim_num$x_nums[i], combinations_aim_num$y_vars[i]))
+ # }
+
+```
+
+
+## Communicate 💬️
+
+- What are my testable hypothesis about the data?
+
+- What is surprising about my data?
+
+- What should I follow up on? 
 

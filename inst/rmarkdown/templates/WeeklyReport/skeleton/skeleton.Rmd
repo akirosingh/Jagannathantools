@@ -1,27 +1,157 @@
 ---
-title: "Untitled"
+title: "Weekly Update"
+runningheader: "Tufte Handout with R Markdown" # only for pdf output
+author: "Adam Kirosingh"
+date: "`r format(as.POSIXct(Sys.Date())-24*7*60*60, '%Y %B %d')`-`r format(Sys.time(), '%d')`"
 output:
-  html_document:
-    toc: true
-    fig_caption: true
+  tufte::tufte_html: default
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+  tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
+bibliography: skeleton.bib
+link-citations: yes
+editor_options: 
+  chunk_output_type: console
 ---
 
-## Overview
-
-## Analysis
-
-```{r global_options, include=FALSE}
+```{r setup, include=FALSE}
+library(tufte)
+library(ggthemes)
+library(knitr)
+library(rmdformats)
+library(here)
+library(togglr)
+library(tidyverse)
+require(ggrepel)
+library(lubridate)
+library(formatR)
+library(timevis)
+library(kableExtra)
+library(rvest)
+library(ggtext)
+library(emo)
+# invalidate cache when the tufte version changes
+knitr::opts_chunk$set(cache.extra = packageVersion('tufte'))
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 knitr::opts_knit$set(root.dir = '../')
+options(htmltools.dir.version = FALSE)
+
+
+### Emoji functions
+
+emoji_to_link <- function(x) {
+  paste0("https://emojipedia.org/emoji/",x) %>%
+    read_html() %>%
+    html_nodes("tr td a") %>%
+    .[1] %>%
+    html_attr("href") %>%
+    paste0("https://emojipedia.org/", .) %>%
+    read_html() %>%
+    html_node('div[class="vendor-image"] img') %>%
+    html_attr("src")
+}
+
+link_to_img <- function(x, size = 25) {
+  paste0("<img src='", x, "' width='", size, "'/>")
+}
+
+mean_emoji_color <- function(x) {
+  data <- png::readPNG(RCurl::getURLContent(x))
+  color_freq <- names(sort(table(rgb(data[,,1], data[,,2], data[,,3])), 
+                           decreasing = TRUE))
+  setdiff(color_freq, c("#FFFFFF", "#000000"))[1]
+}
+
+
+
 ```
 
-**Project:**`r jagtools::ProjectName()`
-**PI:**`r jagtools::ProjectPI()`  
-**Prepared By:**`r jagtools::ProjectAnalyst()`  
-**Date:** `r paste(format(Sys.Date(), '%m/%d/%Y'))`    
+# What I have done since our last meeting ⭐️
 
-```{r setup, include=FALSE}
-source("./packages.R")
+```{r toggl hours, fig.height= 6, warning=FALSE, message=FALSE, echo = FALSE,cache=FALSE}
+Day1 <- as_date(as.POSIXct(Sys.Date())-24*8*60*60)
+Day7 <- as_date(as.POSIXct(Sys.Date())+24*2*60*60)
+
+invisible(set_toggl_api_token("c68889fa7ced6148d7b086f84ed95ba4"))
+
+
+time_entries <- get_time_entries(since = Day1)
+time_entries$start <- as_date(time_entries$start)
+time_entries$stop <- as_date(time_entries$stop)
+
+
+Jlab <- time_entries %>%
+  subset(project_name == "Jagannathan Lab" &
+           start > Day1) %>%
+  group_by(description) %>%
+  summarize(hours = sum(duration) / 3600)
+
+
+E_Jlab <- Jlab %>%
+mutate(emoji = emo::ji_extract_all(description)) %>%
+mutate(url = map_chr(emoji, slowly(~emoji_to_link(.x), rate_delay(1))),
+         label = link_to_img(url)) %>%
+  mutate(color = map_chr(url, slowly(~mean_emoji_color(.x), rate_delay(1)))) %>%
+  mutate(text = substr(description,1,nchar(description)-2))
+
+offset <- max(Jlab$hours) / 20
+
+ggplot(E_Jlab, aes(
+  x = reorder(text, hours),
+  y = hours,
+  label = label)
+) + geom_bar(stat = 'identity', aes(  fill = unclass(prismatic::clr_lighten(color, 0.4)))) + coord_flip() + labs(x = "", y = "Hours", title = paste(round(sum(Jlab$hours), 2), "Recorded Hours"))+ 
+  geom_richtext(aes(y = hours + offset), fill = NA, label.color = NA,
+                label.padding = grid::unit(rep(0, 4), "pt"))+
+  scale_fill_identity() +
+  scale_color_identity() +
+theme_tufte(base_size = 18) + theme(legend.position = "none")
 ```
+
+
+```{r deepwork table, echo = FALSE, cache=FALSE}
+Deepwork <- time_entries %>%
+  subset(project_name == "Jagannathan Lab" &
+           start > Day1 & stop < Day7) %>%
+  subset(tags %in% c("Extraneous","Core-value")) %>%
+  group_by(tags) %>%
+  summarize(hours = round(sum(duration) / 3600,2)) %>%
+  rename(`Type of work` = "tags")
+
+knitr::kable(Deepwork, caption = 'By keeping track of things that are core-valued (i.e. thinking deeply about problems) I hope I do more of it.') 
+```
+
+- Action Items
+
+# Obstacles I have encountered 🏔️
+
+- Action Items
+
+# What I will do before our next meeting ⏳️
+
+- Action Items
+
+# Project List with Action Items 🍬️
+
+### Project A
+
+-Action Items
+
+### Project B
+
+-Action Items
+
+```{r bib, include=FALSE}
+# create a bib file for the R packages used in this document
+knitr::write_bib(c('base', 'rmarkdown'), file = 'skeleton.bib')
+```
+
+
+
+
+
 
 
