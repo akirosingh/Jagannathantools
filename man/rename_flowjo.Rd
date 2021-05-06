@@ -4,10 +4,16 @@
 \alias{rename_flowjo}
 \title{Fixing the column names of csv files exported from flowjo}
 \usage{
-rename_flowjo(data, removal = " \\\\| Freq\\\\. of Parent \\\\(\\\\\%\\\\)")
+rename_flowjo(
+  data,
+  feature_num = 1,
+  removal = " \\\\| Freq\\\\. of Parent \\\\(\\\\\%\\\\)"
+)
 }
 \arguments{
 \item{data}{dataframe from flowjo with raw column names}
+
+\item{feature_num}{the number of additional information to column names}
 
 \item{removal}{the parts of the column names to remove}
 }
