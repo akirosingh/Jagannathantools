@@ -90,9 +90,10 @@ CreateReadMe <- function(template = c('Background', 'R', 'DataRaw',
   readme <- readme[!doNotOverwrite]
   con <- con[!doNotOverwrite]
   files_created <- mapply(writeLines, lapply(readme, paste0, collapse = '\n'), con)
-  cat("library(tidyverse)",file=paste0(path,"packages.R"),sep="\n")
-  cat("library(readr)",file=paste0(path,"packages.R"),sep="\n",append=TRUE)
-  cat("library(readxl)",file=paste0(path,"packages.R"),sep="\n",append=TRUE)
-  cat("library(todor)",file=paste0(path,"packages.R"),sep="\n",append=TRUE)
-  cat("library(here)",file=paste0(path,"packages.R"),sep="\n",append=TRUE)
+  cat("library(tidyverse)",file=paste0(path,"/packages.R"),sep="\n")
+  cat("library(readr)",file=paste0(path,"/packages.R"),sep="\n",append=TRUE)
+  cat("library(readxl)",file=paste0(path,"/packages.R"),sep="\n",append=TRUE)
+  cat("library(todor)",file=paste0(path,"/packages.R"),sep="\n",append=TRUE)
+  cat("library(here)",file=paste0(path,"/packages.R"),sep="\n",append=TRUE)
 }
+
