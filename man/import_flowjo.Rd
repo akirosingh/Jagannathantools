@@ -4,12 +4,18 @@
 \alias{import_flowjo}
 \title{Importing raw .csv files directly from FlowJo}
 \usage{
-import_flowjo(directory = "DataRaw/", filter_string = "\\\\.csv")
+import_flowjo(
+  directory = "DataRaw/",
+  filter_string = "\\\\.csv",
+  rm.bottom = T
+)
 }
 \arguments{
 \item{directory}{a string with the path to the folder containng csv files}
 
 \item{filter_string}{a string that has a pattern filter out csv files}
+
+\item{rm.bottomm}{T if std and mean are at the bottomm and to remove the last column. F if you just want to import and concatenate everything}
 }
 \value{
 

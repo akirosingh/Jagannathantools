@@ -4,7 +4,7 @@
 \alias{plot_cat}
 \title{Graphing boxplots with wilcox tests}
 \usage{
-plot_cat(df, x_cat, y_var, condition, wilcox_results)
+plot_cat(df, x_cat, y_var, condition, p.method, wilcox_results = NA)
 }
 \arguments{
 \item{df}{data}
@@ -14,6 +14,8 @@ plot_cat(df, x_cat, y_var, condition, wilcox_results)
 \item{y_var}{a continuous variable}
 
 \item{condition}{the different experimental conditions in an experiment}
+
+\item{p.method}{the adjusted p-value "p", "bonferroni", "holm, "BH"}
 
 \item{wilcox_results}{the results of wilcox tests}
 }
