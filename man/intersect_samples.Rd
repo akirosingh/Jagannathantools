@@ -2,7 +2,7 @@
 % Please edit documentation in R/intersect_samples.R
 \name{intersect_samples}
 \alias{intersect_samples}
-\title{}
+\title{Core samples across conditions}
 \usage{
 intersect_samples(df, sampleid, condition = NA, x_cat)
 }
@@ -19,10 +19,7 @@ intersect_samples(df, sampleid, condition = NA, x_cat)
 
 }
 \description{
-.. content for \description{} (no empty lines) ..
-}
-\details{
-.. content for \details{} ..
+Finding the core samples shared across many different conditions for paired tests content for paired tests
 }
 \author{
 akirosingh

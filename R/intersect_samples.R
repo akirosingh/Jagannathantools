@@ -1,8 +1,6 @@
-##' .. content for \description{} (no empty lines) ..
+##' Finding the core samples shared across many different conditions for paired tests content for paired tests
 ##'
-##' .. content for \details{} ..
-##'
-##' @title
+##' @title Core samples across conditions
 ##' @param df the dataframe to subset to sample ids shared across x_cat
 ##' @param sampleid the sample ids often patient numbers
 ##' @param condition the experimental condition such as Stim condition == "M1"
