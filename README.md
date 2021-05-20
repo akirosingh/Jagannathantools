@@ -1,6 +1,6 @@
 # Jagannathan Lab Tools
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/akirosingh/Jagannathantools)
@@ -168,6 +168,7 @@ Thanks to the following people who have contributed to this project:
     <td align="center"><a href="https://github.com/emmanuella-coder"><img src="https://avatars.githubusercontent.com/u/80437695?v=4?s=100" width="100px;" alt=""/><br /><sub><b>emmanuella-coder</b></sub></a><br /><a href="#design-emmanuella-coder" title="Design">🎨</a></td>
     <td align="center"><a href="https://github.com/akirosingh"><img src="https://avatars.githubusercontent.com/u/24550000?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam Kirosingh</b></sub></a><br /><a href="https://github.com/akirosingh/Jagannathantools/commits?author=akirosingh" title="Code">💻</a> <a href="#ideas-akirosingh" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/akirosingh/Jagannathantools/commits?author=akirosingh" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/kdantz8"><img src="https://avatars.githubusercontent.com/u/41169603?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kdantz8</b></sub></a><br /><a href="#ideas-kdantz8" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/KattriavdP"><img src="https://avatars.githubusercontent.com/u/84545027?v=4?s=100" width="100px;" alt=""/><br /><sub><b>KattriavdP</b></sub></a><br /><a href="#ideas-KattriavdP" title="Ideas, Planning, & Feedback">🤔</a> <a href="#userTesting-KattriavdP" title="User Testing">📓</a></td>
   </tr>
 </table>
 
