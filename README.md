@@ -8,7 +8,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/akirosingh/Jagannathantools?style=social)
 
 
-This package contains numerous templates and tools to make life at the Jagannathan Lab happier and more efficient!
+This package contains numerous templates and tools to make life at the Jagannathan Lab happier and more efficient! Check out our [release presentation](https://askadam.me/20210427%20jagtools/jagtools_release.html)
 
 ![](inst/figures/redlogo.svg)
 
