@@ -18,6 +18,7 @@ import_flowjo <- function(directory = "DataRaw/", filter_string = "\\.csv",rm.bo
     df <- head(read_csv(paste0(directory,target_files[i])),-2)
     # Removing last column
     df <- df[1:(length(df)-1)]
+    df$ExperimentID <- target_files[i]
     stacked_df <- bind_rows(df,stacked_df)
   }
   return(stacked_df)
@@ -28,6 +29,7 @@ import_flowjo <- function(directory = "DataRaw/", filter_string = "\\.csv",rm.bo
   for (i in 1:length(target_files)){
     # Importing and removing last two rows (Mean and SD)
     df <- read_csv(paste0(directory,target_files[i]))
+    df$ExperimentID <- target_files[i]
     stacked_df <- bind_rows(df,stacked_df)
 
   }
